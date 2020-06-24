@@ -25,7 +25,7 @@ Route::get('/todos/{todo}/create', 'TodoController@create');
 Route::get('/todos/{todo}/edit','TodoController@edit');
 
 Route::post('/todos','TodoController@store');
-Route::post('/todos/{todo}','TodoController@update');//编辑TODO提交的处理页路由
-Route::patch('/todos/{todo}','TodoController@update');//
-Route::delete('/todos/{todo}','TodoController@destroy');//删除TODO的处理页路由
-Route::patch('/todos/{todo}/completed','TodoController@complete');//完成TODO的处理页路由
+Route::post('/todos/{todo}','TodoController@update');
+Route::patch('/todos/{todo}','TodoController@update');
+Route::delete('/todos/{todo}','TodoController@destroy');
+Route::patch('/todos/{todo}/completed','TodoController@complete');
