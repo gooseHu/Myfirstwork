@@ -16,22 +16,13 @@
                                     <span @if($todo->is_completed) style="text-decoration: line-through"@endif>
                                         {{$todo->name}}
                                     </span>
-                                {{-- {{$todo->name}}
-                                 @if($todo->is_completed)
-                                     <span class="badge badge-pill badge-success">已完成</span>
-                                 @else
-                                     <span class="badge badge-pill badge-secondary">未完成</span>
-                                 @endif  --}}
-
                                 <a class="btn btn-primary float-right" href="/todos/{{$todo->id}}">View</a>
-
                                 <form action="/todos/{{$todo->id}}" method="post"
                                       class="d-inline-block float-right mr-2">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>
-
                                 @if(!$todo->is_completed)
                                     <form action="/todos/{{$todo->id}}/completed" method="post"
                                           class="d-inline-block float-right mr-2">
